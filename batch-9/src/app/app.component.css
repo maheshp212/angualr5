@@ -1,0 +1,38 @@
+body{
+  background-color: #cecece;
+}
+nav{
+  clear: both;
+}
+nav ul{
+  width: 100%;
+  background-color: skyblue;
+  height: 32px;
+  margin-left: -8px;
+}
+nav li{
+  float: left;
+    list-style: none;
+    padding: 5px;
+  margin: 2px 0;
+}
+
+nav li a{
+  text-decoration: none;
+  padding: 5px;
+
+}
+nav li a:hover{
+ text-decoration: underline;
+ background-color: tomato;
+ border-radius: 5px;
+}
+
+.content{
+  background-color: #ccc;
+    clear: both;
+    width: 100%;
+    min-height: 500px;
+    margin: -16px 20px 0 -8px;
+    padding: 20px;
+}

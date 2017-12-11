@@ -1,0 +1,72 @@
+<!--
+  ng-click       (click)
+  ng-dblclick     (dblclick)
+  ng-mouseover
+  ng-mouseenter
+  ng-mouseout
+  ng-mouseleave
+  ng-mousemove
+
+  ng-keypress
+  ng-keyup
+  ng-keydown
+
+  ng-focus
+  ng-blur
+  ng-change
+  ng-submit
+  ng-cut
+  ng-copy
+  ng-paste
+-->
+<style type="text/css">
+  p{
+    background-color: red;
+  }
+</style>
+<p (click)="callMe()"> this is Click</p>
+<p (dblclick)="callMe()"> this is dblclick</p>
+<p (mouseover)="callMe()"> this is mouseover</p>
+<p (mouseout)="callMe()"> this is mouseout</p>
+<p (mouseenter)="callMe()"> this is mouseenter</p>
+<p (mouseleave)="callMe()"> this is mouseleave</p>
+
+
+<form name="login" #f=ngForm>
+<pre>
+  <input type="text" name="fname" [(ngModel)]="fname" #fitName=ngModel (click)="callMe()" placeholder="click" required minlength="5">
+  <input type="text" name="lname" [(ngModel)]="lname" #litName=ngModel (click)="callMe()" placeholder="click" required minlength="5">
+<!--   <input type="text" name="fname" [(ngModel)]="fname" #fitName=ngModel (focus)="callMe()" placeholder="focus">
+  <input type="text" name="fname" [(ngModel)]="fname" #fitName=ngModel (blur)="callMe()" placeholder="blur">
+  <input type="text" name="fname" [(ngModel)]="fname" #fitName=ngModel (change)="callMe()" placeholder="change">
+  <input type="text" name="fname" [(ngModel)]="fname" #fitName=ngModel (cut)="callMe()" placeholder="cut">
+  <input type="text" name="fname" [(ngModel)]="fname" #fitName=ngModel (copy)="callMe()" placeholder="copy">
+  <input type="text" name="fname" [(ngModel)]="fname" #fitName=ngModel (paste)="callMe()" placeholder="paste">
+  <input type="text" name="fname" [(ngModel)]="fname" #fitName=ngModel (keyup)="callMe()" placeholder="keyup">
+  <input type="text" name="fname" [(ngModel)]="fname" #fitName=ngModel (keydown)="callMe()" placeholder="keydown">
+  <input type="text" name="fname" [(ngModel)]="fname" #fitName=ngModel (keypress)="callMe()" placeholder="keypress"> -->
+  <input type="submit" value="submit">
+  form feild states
+  {{fname}}
+  valid :: {{fitName.valid}}
+  invalid :: {{fitName.invalid}}
+  touched :: {{fitName.touched}}
+  untouched ::{{fitName.untouched}}
+  dirty :: {{fitName.dirty}}
+  pristine :: {{fitName.pristine}}
+  <!-- error :: {{fitName.error}} -->
+
+
+  form states
+  valid :: {{f.valid}}
+  invalid :: {{f.invalid}}
+  dirty :: {{f.dirty}}
+  pristine :: {{f.pristine}}
+  submitted :: {{f.submitted}}
+
+  touched :: {{f.touched}}
+  untouched :: {{f.untouched}}
+
+</pre>
+
+</form>

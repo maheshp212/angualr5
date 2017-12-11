@@ -1,0 +1,29 @@
+<p>
+  services works!
+</p>
+
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th>email</th>
+    <th>age</th>
+    <th>password</th>
+    <th>Actions</th>
+  </tr>
+  <tr *ngFor="let user of listUsersobj">
+    <td>{{user.fname}} {{user.lname}}</td>
+    <td>{{user.email}}</td>
+    <td>{{user.age}}</td>
+    <td>{{user.password}}</td>
+    <td>
+      <a (click)="viewUser(user.id)">view</a>
+      <button (click)="updateUser(user.id)">update</button>
+      <span (click)="deleteUser(user.id)">Delete</span>
+    </td>
+  </tr>
+</table>
+
+
+<button (click)="createUser()">Create</button>
+
+{{dataobj}}
