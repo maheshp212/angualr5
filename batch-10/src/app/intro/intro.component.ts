@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
 })
 export class IntroComponent {
 
+  name:string = 'qshore'
+  a:number = 56;
+  b:number = 23;
   constructor() { }
 
 }
