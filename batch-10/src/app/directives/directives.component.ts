@@ -26,4 +26,8 @@ export class DirectivesComponent implements OnInit {
     console.log('count ::' + this.i);
     this.i++
   }
+
+  cus1(){
+    console.log('this is cus1 of directive');
+  }
 }

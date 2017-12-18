@@ -8,12 +8,16 @@ import { IntroComponent } from './intro/intro.component';
 import { HomeComponent } from './home/home.component';
 import { VariablesComponent } from './variables/variables.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { FormsComponent } from './forms/forms.component';
+import { AttrDirectiveDirective } from './attr-directive.directive';
+import { ClasssDirective } from './classs.directive';
 
 const appRoutes:Routes = [
   {path:'', component:HomeComponent},
   {path:'intro', component:IntroComponent},
   {path:'varibales', component:VariablesComponent},
   {path:'directives', component:DirectivesComponent},
+  {path:'forms', component:FormsComponent},
 ];
 
 @NgModule({
@@ -22,7 +26,10 @@ const appRoutes:Routes = [
     IntroComponent,
     HomeComponent,
     VariablesComponent,
-    DirectivesComponent
+    DirectivesComponent,
+    FormsComponent,
+    AttrDirectiveDirective,
+    ClasssDirective
   ],
   imports: [
     BrowserModule,

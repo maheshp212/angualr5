@@ -1,0 +1,29 @@
+<p>
+  forms works!
+</p>
+
+
+<form name="f" #frm=ngForm>
+    <pre>
+    <input type="text" name="fname" [(ngModel)]="fname" #firstName=ngModel placeholder="fname" >
+    <input type="email" name="email" [(ngModel)]="email" #mail=ngModel placeholder="email" >
+    <input type="submit" value="submit">
+    form feild states
+    valid  :: {{firstName.valid}}
+    invalid  :: {{firstName.invalid}}
+    touched  :: {{firstName.touched}}
+    untouched  :: {{firstName.untouched}}
+    dirty  :: {{firstName.dirty}}
+    pristine  :: {{firstName.pristine}}
+    error  :: {{firstName.error}}
+
+    form states
+    valid :: {{frm.valid}}
+    invalid :: {{frm.invalid}}
+    touched :: {{frm.touched}}
+    untouched :: {{frm.untouched}}
+    dirty :: {{frm.dirty}}
+    pristine :: {{frm.pristine}}
+    submitted :: {{frm.submitted}}
+    </pre>
+</form>
