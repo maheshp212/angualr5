@@ -11,6 +11,10 @@ import { DirectivesComponent } from './directives/directives.component';
 import { FormsComponent } from './forms/forms.component';
 import { AttrDirectiveDirective } from './attr-directive.directive';
 import { ClasssDirective } from './classs.directive';
+import { PipesComponent } from './pipes/pipes.component';
+import { HexaPipe } from './hexa.pipe';
+import { ParamsPipe } from './params.pipe';
+import { LifecycleComponent } from './lifecycle/lifecycle.component';
 
 const appRoutes:Routes = [
   {path:'', component:HomeComponent},
@@ -18,6 +22,8 @@ const appRoutes:Routes = [
   {path:'varibales', component:VariablesComponent},
   {path:'directives', component:DirectivesComponent},
   {path:'forms', component:FormsComponent},
+  {path:'pipes', component:PipesComponent},
+  {path:'lifecycle', component:LifecycleComponent},
 ];
 
 @NgModule({
@@ -29,7 +35,11 @@ const appRoutes:Routes = [
     DirectivesComponent,
     FormsComponent,
     AttrDirectiveDirective,
-    ClasssDirective
+    ClasssDirective,
+    PipesComponent,
+    HexaPipe,
+    ParamsPipe,
+    LifecycleComponent
   ],
   imports: [
     BrowserModule,
