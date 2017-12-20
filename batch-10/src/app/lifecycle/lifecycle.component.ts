@@ -17,6 +17,8 @@ export class LifecycleComponent implements OnInit, DoCheck,
                               AfterViewInit, AfterViewChecked,
                               OnDestroy {
 
+
+
   constructor() { }
   ngOnInit() {
     console.log('ngOnInit')

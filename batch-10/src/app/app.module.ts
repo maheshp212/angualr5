@@ -2,6 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from '@angular/router'
 import {FormsModule} from '@angular/forms'
+import {HttpModule} from '@angular/http'
+
+import { Ng2SmartTableModule } from 'ng2-smart-table';
+
 
 import { AppComponent } from './app.component';
 import { IntroComponent } from './intro/intro.component';
@@ -15,6 +19,7 @@ import { PipesComponent } from './pipes/pipes.component';
 import { HexaPipe } from './hexa.pipe';
 import { ParamsPipe } from './params.pipe';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
+import { ApisComponent } from './apis/apis.component';
 
 const appRoutes:Routes = [
   {path:'', component:HomeComponent},
@@ -24,6 +29,7 @@ const appRoutes:Routes = [
   {path:'forms', component:FormsComponent},
   {path:'pipes', component:PipesComponent},
   {path:'lifecycle', component:LifecycleComponent},
+  {path:'apis', component:ApisComponent},
 ];
 
 @NgModule({
@@ -39,12 +45,15 @@ const appRoutes:Routes = [
     PipesComponent,
     HexaPipe,
     ParamsPipe,
-    LifecycleComponent
+    LifecycleComponent,
+    ApisComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    FormsModule
+    FormsModule,
+    HttpModule,
+    Ng2SmartTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
