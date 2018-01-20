@@ -1,0 +1,52 @@
+header{
+  background-color: skyblue;
+  height: 95px;
+}
+header #logo {
+  float: left;
+  width: 100px;
+}
+header #logo img{width: 90px;}
+header #title{
+  float:left;
+  width: 800px;
+}
+
+nav{
+  clear: both
+}
+nav ul {
+  background-color: tomato;
+  height: 45px;
+  margin: 0;
+}
+nav li{
+  float: left;
+  margin: 12px 5px 0 5px;
+  list-style: none;
+}
+nav li a{
+  text-decoration: none;
+  padding: 10px;
+  font-size: 20px;
+}
+nav li a:hover{
+  text-decoration: underline;
+  background-color: skyblue;
+  border-radius: 10px
+}
+#content{
+  clear: both;
+  min-height: 410px;
+  padding: 20px;
+  background-color: #ccc;
+}
+footer{
+  clear: both;
+  background-color:#928f8f;
+  text-align: center;
+  height: 20px;
+  padding:10px;
+}
+
+

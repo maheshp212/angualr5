@@ -1,0 +1,75 @@
+<p>
+  directives works!
+</p>
+
+<pre>
+<!--
+ng-app -- @NgModule
+**ng-init
+ng-repeat -- *ngFor
+**ng-bind
+ng-if -- *ngIf
+ng-show  -- [hidden]
+ng-hide
+ng-switch - [ngSwitchCase]
+ng-switch-when -- *ngSwitchWhen
+ng-model -- [(ngModel)]
+ng-click -- (click)
+
+
+* - condition
+[] - attribute
+[()] - two way data binding
+() - events
+#  - localvariable
+
+-->
+
+{{fruits}}
+{{age}}
+
+<p *ngIf="age == 54; else qshore"> this is if</p>
+<ng-template #qshore> this is else</ng-template>
+<p [hidden] = "age == 154"> this is hidden</p>
+<p *ngFor="let fruit of fruits"> {{fruit}}  </p>
+
+<ul>
+  <li *ngFor="let fruit of fruits"> {{fruit}} </li>
+</ul>
+
+<select>
+  <option>select</option>
+  <option *ngFor="let fruit of fruits"> {{fruit}} </option>
+  <option>none</option>
+</select>
+
+<table border="1">
+  <tr *ngFor="let fruit of fruits">
+    <td> {{fruit}}</td>
+  </tr>
+</table>
+
+<p [ngSwitch] = age >
+  <span *ngSwitchCase = 54  > this is 54</span>
+  <span *ngSwitchCase = 154  > this is 154</span>
+  <span *ngSwitchCase = 254  > this is 254</span>
+  <span *ngSwitchDefault > this is default</span>
+</p>
+
+</pre>
+<!-- <input type="text" name="fname" [(ngModel)]="fname" #firstName=ngModel> -->
+
+{{fname}}
+
+
+<div (click)="callMe()"> this is click </div>
+<div (mouseover)="callMe()"> this is over </div>
+<div (mousemove)="callMe()"> this is move </div>
+<div (mouseleave)="callMe()"> this is leave </div>
+<pre>
+<input type="text" name="fname" [(ngModel)]="fname" #firstName=ngModel (click)="callMe()" placeholder="click">
+<input type="text" name="fname1" [(ngModel)]="fname1" #firstName1=ngModel (focus)="callMe()" placeholder="focus">
+<input type="text" name="fname2" [(ngModel)]="fname2" #firstName2=ngModel (blur)="callMe()" placeholder="blur">
+<input type="text" name="fname3" [(ngModel)]="fname3" #firstName3=ngModel (change)="callMe()" placeholder="change">
+</pre>
+

@@ -1,0 +1,31 @@
+<pre>
+
+<form  name ="frm1" #f=ngForm>
+
+<input type="text" name="fname" [(ngModel)]="fname" #firstName=ngModel required>
+
+<input type="email" name="lname" [(ngModel)]="lname" #lastName=ngModel>
+
+<input type="submit"  value="submit">
+</form>
+
+
+  form states
+  - submitted :: {{f.submitted}} <!-- {{frm1.$submitted}} -->
+  - valid :: {{f.valid}}
+  - invalid :: {{f.invalid}}
+  - dirty :: {{f.dirty}}
+  - pristine :: {{f.pristine}}
+  - touched :: {{f.touched}}
+  - untouched :: {{f.untouched}}
+
+  form field states
+  - dirty :: {{firstName.dirty}} <!-- {{frm1.fname.$dirty}}  -->
+  - pristine :: {{firstName.pristine}}
+  - valid :: {{firstName.valid}}
+  - invalid :: {{firstName.invalid}}
+  - touched :: {{firstName.touched}}
+  - untouched :: {{firstName.untouched}}
+  - error
+
+</pre>
