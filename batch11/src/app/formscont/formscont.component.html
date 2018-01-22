@@ -1,0 +1,26 @@
+<p>
+  formscont works!
+</p>
+
+
+<form name="login" #f=ngForm (submit)="f.valid && loginSubmit()" >
+<pre>
+  <input type="text" name="login.username" [(ngModel)]="login.username" #username=ngModel placeholder="User Name" required>
+  <input type="password" name="login.password" [(ngModel)]="login.password" #password=ngModel placeholder="Password" required minlength="5">
+
+  <input type="submit" value="Submit">
+
+  f.valid {{f.valid}}
+  username.valid {{username.valid}}
+  password.valid {{password.valid}}
+
+  error.required {{password.errors?.required}}
+  error {{password.hasError('required')}}
+
+  error.minlength {{password.errors?.minlength | json}}
+  error.minlength {{password.hasError('minlength')}}
+
+
+</pre>
+</form>
+<p [appAttrDirective]="invoke" msg="asdfasdf"> this is custom directive </p>

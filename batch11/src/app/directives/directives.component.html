@@ -25,6 +25,10 @@ ng-click -- (click)
 
 -->
 
+<p [appAttrDirective] = "callMe"> this is custom directive </p>
+<p class="appClassDirective"> this is custom directive class </p>
+
+
 {{fruits}}
 {{age}}
 
@@ -72,4 +76,6 @@ ng-click -- (click)
 <input type="text" name="fname2" [(ngModel)]="fname2" #firstName2=ngModel (blur)="callMe()" placeholder="blur">
 <input type="text" name="fname3" [(ngModel)]="fname3" #firstName3=ngModel (change)="callMe()" placeholder="change">
 </pre>
+
+
 

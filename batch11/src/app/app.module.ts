@@ -9,12 +9,16 @@ import { IntroComponent } from './intro/intro.component';
 import { VariablesComponent } from './variables/variables.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { FormsComponent } from './forms/forms.component';
+import { FormscontComponent } from './formscont/formscont.component';
+import { AttrDirectiveDirective } from './attr-directive.directive';
+import { ClassDirectiveDirective } from './class-directive.directive';
 
 const rout:Routes = [
   {path:'intro', component:IntroComponent},
   {path:'variables', component:VariablesComponent},
   {path:'directives', component:DirectivesComponent},
   {path:'forms', component:FormsComponent},
+  {path:'forms-cont', component:FormscontComponent},
 ]
 
 
@@ -24,7 +28,10 @@ const rout:Routes = [
     IntroComponent,
     VariablesComponent,
     DirectivesComponent,
-    FormsComponent
+    FormsComponent,
+    FormscontComponent,
+    AttrDirectiveDirective,
+    ClassDirectiveDirective
   ],
   imports: [
     BrowserModule,

@@ -21,6 +21,8 @@ export class DirectivesComponent implements OnInit {
   callMe(){
     console.log(this.count);
     this.count++;
+
+    alert('call me invoked');
   }
 
 }
