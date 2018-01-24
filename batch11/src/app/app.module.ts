@@ -18,16 +18,20 @@ import { PipesComponent } from './pipes/pipes.component';
 import { HexaPipe } from './hexa.pipe';
 import { ParamsPipe } from './params.pipe';
 import { ApisComponent } from './apis/apis.component';
+import { HomeComponent } from './home/home.component';
+import { PageNotFooundComponent } from './page-not-foound/page-not-foound.component';
 
 const rout:Routes = [
+  {path:'', component:HomeComponent},
   {path:'intro', component:IntroComponent},
   {path:'variables', component:VariablesComponent},
   {path:'directives', component:DirectivesComponent},
   {path:'forms', component:FormsComponent},
   {path:'forms-cont', component:FormscontComponent},
   {path:'life-cycle', component:LifecycleComponent},
-  {path:'pipes', component:PipesComponent},
+  {path:'pipes/:id/:cat', component:PipesComponent},
   {path:'apis', component:ApisComponent},
+  {path:'**', component:PageNotFooundComponent},
 ]
 
 
@@ -45,7 +49,9 @@ const rout:Routes = [
     PipesComponent,
     HexaPipe,
     ParamsPipe,
-    ApisComponent
+    ApisComponent,
+    HomeComponent,
+    PageNotFooundComponent
   ],
   imports: [
     BrowserModule,

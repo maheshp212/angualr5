@@ -9,13 +9,32 @@ import {UserService} from './../user.service';
   providers: [UserService],
 })
 export class ApisComponent implements OnInit {
-
+  list:any;
   constructor(private user:UserService) { }
 
   ngOnInit() {
 
-    var a = this.user.listUsers();
-    console.log(a);
+     this.user.listUsers()
+      .subscribe((res) => {
+        console.log(res);
+
+        this.list = res;
+      });
+   // console.log(a);
   }
 
+  callMe(){
+    this.user.createUser()
+    .subscribe(res=>{
+      console.log(res);
+
+        this.user.listUsers()
+      .subscribe((res) => {
+        console.log(res);
+
+        this.list = res;
+      });
+
+    })
+  }
 }

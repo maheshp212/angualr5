@@ -13,11 +13,25 @@ export class UserService {
 
     return this.http.get(url)
     .map((res:Response) => {
-      console.log('########');
-      console.log(res);
-      console.log('**********')
-      return res;
+      return res.json();
     })
+  }
+
+  createUser(){
+    var url = 'http://api.qshore.com/add-user'
+      var data {
+        fname: 'Mohan',
+        lname:'Lal',
+        age:23,
+        email:'mohanlal@123',
+        password:'lal123',
+      };
+    var result = this.http.post(url, data)
+    .map((response:Response) =>{
+      return response.json();
+    });
+
+    return result;
   }
 
 }
