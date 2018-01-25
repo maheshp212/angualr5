@@ -19,7 +19,7 @@ export class UserService {
 
   createUser(){
     var url = 'http://api.qshore.com/add-user'
-      var data {
+      var data = {
         fname: 'Mohan',
         lname:'Lal',
         age:23,
