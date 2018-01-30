@@ -4,6 +4,8 @@ import {RouterModule, Routes} from '@angular/router';
 import {FormsModule} from '@angular/forms'
 import {HttpModule} from '@angular/http'
 
+import { Ng2SmartTableModule } from 'ng2-smart-table';
+
 
 import { AppComponent } from './app.component';
 import { IntroComponent } from './intro/intro.component';
@@ -57,7 +59,8 @@ const rout:Routes = [
     BrowserModule,
     RouterModule.forRoot(rout),
     FormsModule,
-    HttpModule
+    HttpModule,
+    Ng2SmartTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
