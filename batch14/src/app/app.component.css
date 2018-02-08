@@ -1,0 +1,47 @@
+.header{
+    background-color:dodgerblue;
+    height: 105px;
+}
+header #logo{
+  float: left;
+  width: 20%;
+}
+header #logo img{
+  width: 100px
+}
+header #title{
+  float: left;
+  width: 79%;
+}
+
+nav{
+  margin-top:-30px;
+  clear: both;
+  background-color: tomato;
+  height: 40px;
+}
+nav ul li{
+   float: left;
+   list-style: none;
+   margin: 10px;
+}
+nav a {
+   padding: 5px;
+}
+nav a:hover{
+  background-color:dodgerblue;
+  padding: 5px;
+}
+.content{
+  clear: both;
+  min-height: 500px;
+  background-color: #efefef40;
+}
+.bottom{
+  clear: both;
+  text-align: center;
+  color: white;
+  padding: 5px;
+  background-color:dodgerblue;
+    height: 30px;
+}
