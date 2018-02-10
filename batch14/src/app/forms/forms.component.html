@@ -1,0 +1,42 @@
+<p>
+  forms works!
+</p>
+<form name="login" #f=ngForm>
+  <input type="text" name="fname" [(ngModel)]="fname" #firstName=ngModel required minlength="5">
+  <!-- <p *ngIf="firstName.dirty && firstName.invalid"> please enter a valid input </p> -->
+  <p *ngIf="firstName.dirty && firstName.hasError('required')"> please enter a vlue </p>
+
+  <p *ngIf="firstName.dirty && firstName.hasError('minlength')"> please enter min 5 characters </p>
+
+
+  <input type="text" name="lname" [(ngModel)]="lname" #lastName=ngModel>
+  <input type="submit" value="submit">
+</form>
+
+<pre>
+    form field states
+ firstName.valid :: {{firstName.valid}}
+ firstName.invalid :: {{firstName.invalid}}
+ firstName.dirty :: {{firstName.dirty}}
+ firstName.pristine :: {{firstName.pristine}}
+ firstName.touched :: {{firstName.touched}}
+ firstName.untouched :: {{firstName.untouched}}
+ required :: {{firstName.hasError('required')}}
+ minlength :: {{firstName.hasError('minlength')}}
+
+ form states
+
+ f.valid :: {{f.valid}}
+ f.invalid :: {{f.invalid}}
+ f.dirty :: {{f.dirty}}
+ f.pristine :: {{f.pristine}}
+ f.touched :: {{f.touched}}
+ f.untouched :: {{f.untouched}}
+ f.submitted :: {{f.submitted}}
+
+
+</pre>
+
+
+
+

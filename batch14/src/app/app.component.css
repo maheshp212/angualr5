@@ -36,6 +36,7 @@ nav a:hover{
   clear: both;
   min-height: 500px;
   background-color: #efefef40;
+  padding: 20px;
 }
 .bottom{
   clear: both;

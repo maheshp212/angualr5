@@ -1,0 +1,64 @@
+<pre>
+  {{fname}}
+  {{age}}
+  {{fruits}}
+</pre>
+
+
+<p *ngIf="lname == 'qshore';else callelse"> Im a para..</p>
+<ng-template #callelse> this is my else</ng-template>
+
+
+<p *ngFor="let ab of fruits"> {{ab}} </p>
+
+<ol >
+  <li *ngFor="let fruit of fruits">{{fruit}} </li>
+</ol>
+
+<select>
+  <option> select</option>
+  <option *ngFor="let fruit of fruits"> {{fruit}}</option>
+</select>
+
+<table border="1">
+  <tr *ngFor="let fruit of fruits">
+    <td > {{fruit}} </td>
+  </tr>
+</table>
+
+<p [hidden]="fname == 'qshore'" > this is hidden</p>
+
+
+<input type="text" name="lname" [(ngModel)]="lname" #lastName=ngModel> {{lname}}
+
+
+<div [ngSwitch]="lname">
+  <span *ngSwitchCase="'qshore'"> this is case </span>
+  <span *ngSwitchCase="'ramesh'"> this is ramesh </span>
+  <span *ngSwitchCase="'angular'"> this is angular </span>
+  <span *ngSwitchDefault> this is default </span>
+</div>
+
+
+<p (click)="callMe()" > this is click</p>
+<p (mouseover)="callMe()" > this is mouseover</p>
+<p (mouseout)="callMe()" > this is mouseout</p>
+<p (mouseenter)="callMe()" > this is mouseenter</p>
+<p (mouseleave)="callMe()" > this is mouseleave</p>
+<p (mousemove)="callMe()" > this is mousemove</p>
+
+<pre>
+
+<input type="text" name="lname" [(ngModel)]="lname" placeholder="click" (click)="callMe()">
+<input type="text" name="lname" [(ngModel)]="lname" placeholder="focus" (focus)="callMe()">
+<input type="text" name="lname" [(ngModel)]="lname" placeholder="blur" (blur)="callMe()">
+<input type="text" name="lname" [(ngModel)]="lname" placeholder="change" (change)="callMe()">
+<input type="text" name="lname" [(ngModel)]="lname" placeholder="cut" (cut)="callMe()">
+<input type="text" name="lname" [(ngModel)]="lname" placeholder="copy" (copy)="callMe()">
+<input type="text" name="lname" [(ngModel)]="lname" placeholder="paste" (paste)="callMe()">
+<input type="text" name="lname" [(ngModel)]="lname" placeholder="keypress" (keypress)="callMe()">
+<input type="text" name="lname" [(ngModel)]="lname" placeholder="keyup" (keyup)="callMe()">
+
+<input type="text" name="lname" [(ngModel)]="lname" placeholder="keydown" (keydown)="callMe()">
+</pre>
+

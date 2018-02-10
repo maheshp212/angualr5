@@ -9,15 +9,15 @@
 </header>
 <nav>
 <ul>
-    <li><a href="">Contact Us</a> </li>
-    <li><a  href="">Contact Us</a> </li>
-    <li><a  href="">Contact Us</a> </li>
-    <li><a  href="">Contact Us</a> </li>
+    <li><a [routerLink]="['/intro']">Intro</a> </li>
+    <li><a [routerLink]="['/variables']">variables</a> </li>
+    <li><a [routerLink]="['/dirct']">directives</a> </li>
+    <li><a [routerLink]="['/forms']">Forms</a> </li>
+    <li><a [routerLink]="['/pipes']">Pipes</a> </li>
   </ul>
 </nav>
 <div class="content">
-
-this is my content
+    <router-outlet></router-outlet>
 </div>
 <footer class ="bottom">
     &copy; Copyright 2014, All Rights Reserved
