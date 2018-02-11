@@ -4,6 +4,9 @@
   {{fruits}}
 </pre>
 
+<p [appAttr]="callMe2" msg="angular js"> this is an custom directive</p>
+
+<span class="appClass"></span>
 
 <p *ngIf="lname == 'qshore';else callelse"> Im a para..</p>
 <ng-template #callelse> this is my else</ng-template>
@@ -31,15 +34,15 @@
 
 <input type="text" name="lname" [(ngModel)]="lname" #lastName=ngModel> {{lname}}
 
-
+##################
 <div [ngSwitch]="lname">
-  <span *ngSwitchCase="'qshore'"> this is case </span>
-  <span *ngSwitchCase="'ramesh'"> this is ramesh </span>
-  <span *ngSwitchCase="'angular'"> this is angular </span>
-  <span *ngSwitchDefault> this is default </span>
+  <p *ngSwitchCase="'qshore'"> this is case </p>
+  <p *ngSwitchCase="'ramesh'"> this is ramesh </p>
+  <p *ngSwitchCase="'angular'"> this is angular </p>
+  <p *ngSwitchDefault> this is default </p>
 </div>
 
-
+####################
 <p (click)="callMe()" > this is click</p>
 <p (mouseover)="callMe()" > this is mouseover</p>
 <p (mouseout)="callMe()" > this is mouseout</p>

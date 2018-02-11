@@ -18,4 +18,8 @@ export class VariablesComponent {
     this.lname = 'technologies'
   }
 
+  qshore(){
+    alert('im form variable component');
+  }
+
 }

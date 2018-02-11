@@ -21,5 +21,8 @@ export class DirectivesComponent implements OnInit {
     console.log(this.count);
     this.count++;
   }
+  callMe2(){
+    alert('i m from the diective Component');
+  }
 
 }
