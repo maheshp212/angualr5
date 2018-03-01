@@ -1,0 +1,34 @@
+<p>
+  form-states works!
+</p>
+<pre>
+    <form name="frm" #f=ngForm>
+      <input type="text" name="fname" [(ngModel)]="fname" #firstname=ngModel placeholder="first name" required minlength="5"> {{fname}}
+      <p *ngIf="firstname.dirty && firstname.hasError('required') " style="color:red"> this is a mandatroy field</p>
+      <p *ngIf="firstname.hasError('minlength')" style="color:red"> please enter min 5 characters </p>
+      <input type="text" name="lname" [(ngModel)]="lname" #lastname = ngModel placeholder="last name" required> {{lname}}
+      <input type="submit" value="submit">
+    </form>
+
+From states
+<!-- {{frm.$valid}} --> <!-- syntax of angular 1 -->
+f.valid :: {{f.valid}}
+f.invalid :: {{f.invalid}}
+f.dirty :: {{f.dirty}}
+f.pristine :: {{f.pristine}}
+f.touched :: {{f.touched}}
+f.untouched :: {{f.untouched}}
+f.submitted :: {{f.submitted}}
+
+
+Form Feild states
+<!-- {{frm.fname.$valid}} --> <!-- syntax of angular 1 -->
+firstname.valid :: {{firstname.valid}}
+firstname.invalid :: {{firstname.invalid}}
+firstname.dirty :: {{firstname.dirty}}
+firstname.pristine :: {{firstname.pristine}}
+firstname.touched :: {{firstname.touched}}
+firstname.untouched :: {{firstname.untouched}}
+firstname.hasError('required') :: {{firstname.hasError('required')}}
+firstname.hasError('minlength') :: {{firstname.hasError('minlength')}}
+</pre>
