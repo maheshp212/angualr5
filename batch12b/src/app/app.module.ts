@@ -4,7 +4,7 @@ import {RouterModule, Routes} from '@angular/router'
 import {FormsModule} from '@angular/forms'
 import {HttpModule} from '@angular/http'
 
-
+import { Ng2SmartTableModule } from 'ng2-smart-table';
 
 import { AppComponent } from './app.component';
 import { IntroComponent } from './intro/intro.component';
@@ -14,15 +14,21 @@ import { FormStatesComponent } from './form-states/form-states.component';
 import { FormsComponent } from './forms/forms.component';
 import { AttrDirective } from './attr.directive';
 import { ApisComponent } from './apis/apis.component';
+import { HomeComponent } from './home/home.component';
+import { NotfoundComponent } from './notfound/notfound.component';
+import { ViewUserComponent } from './view-user/view-user.component';
 
 
 const routes:Routes = [
-  {path:'intro', component:IntroComponent},
+  {path:'', component:HomeComponent},
+  {path:'intro/:id/:fname', component:IntroComponent},
   {path:'variables', component:VariablesComponent},
   {path:'directives', component:DirectivesComponent},
   {path:'form-states', component:FormStatesComponent},
   {path:'forms', component:FormsComponent},
   {path:'apis', component:ApisComponent},
+  {path:'view-user/:id', component:ViewUserComponent},
+  {path:'**', component:NotfoundComponent},
 ]
 
 @NgModule({
@@ -34,13 +40,17 @@ const routes:Routes = [
     FormStatesComponent,
     FormsComponent,
     AttrDirective,
-    ApisComponent
+    ApisComponent,
+    HomeComponent,
+    NotfoundComponent,
+    ViewUserComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
     FormsModule,
-    HttpModule
+    HttpModule,
+    Ng2SmartTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

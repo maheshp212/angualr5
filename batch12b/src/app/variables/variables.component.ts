@@ -1,11 +1,11 @@
-import { Component,Input,onInit } from '@angular/core';
+import { Component,Input } from '@angular/core';
 
 @Component({
   selector: 'app-variables',
   templateUrl: './variables.component.html',
   styleUrls: ['./variables.component.css']
 })
-export class VariablesComponent implements onInit{
+export class VariablesComponent{
   fname:string = 'qshores';
   lname:string = 'tech';
 
@@ -24,8 +24,8 @@ export class VariablesComponent implements onInit{
   
   }
 
-  ngOnInit(){
+/*  ngOnInit(){
   console.log(this.sad);
-  }
+  }*/
 
 }
