@@ -1,0 +1,19 @@
+
+
+const routes: Routes = [
+  { path: '', canActivate: [AuthGuard], component: firstLayoutComponent,
+    children: [
+        { path: 'dashboard/s', component: SuperAccountComponent },
+        { path: 'category', component: CategoryComponent},
+    ]
+  },
+  { path: '', canActivate: [PrimaryAccountAuthGuard], component: secondLayoutComponent,
+    children: [
+      { path: 'dashboard/p', component: PrimaryAccountComponent },
+      { path: 'dashboard/pn', component: PrimaryAccountNSComponent },
+     
+    ]
+  },
+ ];
+
+export const routing = RouterModule.forRoot(routes);
